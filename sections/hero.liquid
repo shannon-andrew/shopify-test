@@ -1,21 +1,5 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
-{% comment %}
-  {% for product in collections['new-in'].products %}
-    <div class="hero-container">
-      <img class="image" src="{{ product.featured_image | image_url}}">
-      <div class="content test">
-        <h2>
-          {{ product.title }}
-        </h2>
-        <p>{{ product.description | split: '.' | first | append: '...' }}</p>
-        <h4>{{ product.price | money_without_trailing_zeros }}</h4>
-        <button>Explore now</button>
-      </div>
-    </div>
-  {% endfor %}
-{% endcomment %}
-
 <h1>Hello world</h1>
 
 {% schema %}
