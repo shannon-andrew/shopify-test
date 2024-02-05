@@ -1,38 +1,13 @@
-<div class="container">
-  <a href="{{ routes.root_url }}">
-    Logo
-    LOGO TEST BACK GROUDN R complete bare bones
-  </a>
+<header>
 
-  {% render 'layout-menu' %}
+  <h1>{{ shop.name }}</h1>
 
-  <div>
-    {% if shop.customer_accounts_enabled %}
-      {% if customer %}
-        <a href="{{ routes.account_url }}">
-          {{ 'action.account' | t }}
-        </a>
-        {{ 'action.log_out' | t | customer_logout_link }}
-      {% else %}
-        {{ 'action.log_in' | t | customer_login_link }}
-        {{ 'action.register' | t | customer_register_link }}
-      {% endif %}
-    {% endif %}
+  <p>Andrew shannon</p>
 
-    <a href="{{ routes.cart_url }}">
-      {{ 'action.cart' | t }}
-    </a>
-  </div>
-</div>
+  </header>
 
 {% schema %}
 {
-  "name": "t:sections.header.name",
-  "settings": [
-    {
-      "type": "paragraph",
-      "content": "t:sections.header.settings.paragraph"
-    }
-  ]
+  "name": "header"
 }
 {% endschema %}

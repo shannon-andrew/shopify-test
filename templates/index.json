@@ -1,11 +1,8 @@
 {
   "sections": {
-    "header": {
-      "type": "header"
-    },
-    "footer": {
-      "type": "footer"
+    "hero": {
+      "type": "Hero section"
     }
   },
-  "order": ["header", "footer"]
+  "order": ["hero"]
 }

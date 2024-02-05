@@ -1,10 +1,13 @@
 <html>
   <head>
     {{ content_for_header }}
+    {{ 'global.css' | asset_url | stylesheet_tag }}
   </head>
-
   <body>
-    
-        {{ content_for_layout }}
-       </body>
+    {% comment %} {% section 'header' %} {% endcomment %}
+    <div class="container">
+      {{ content_for_layout }}
+    </div>
+    {% comment %} {% section 'footer' %} {% endcomment %}
+  </body>
 </html>
