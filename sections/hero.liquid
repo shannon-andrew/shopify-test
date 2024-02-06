@@ -1,9 +1,15 @@
-<h1>Hello world</h1>
+<h1>{{ section.settings.text }}</h1>
 
 {% schema %}
 {
   "name": "hero",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
   "presets": [{ "name": "Default hero section" }],
   "tag": "header",
   "class": "custom-hero-section",

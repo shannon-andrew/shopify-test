@@ -4,10 +4,8 @@
     {{ 'global.css' | asset_url | stylesheet_tag }}
   </head>
   <body>
-    {% comment %} {% section 'header' %} {% endcomment %}
     <div class="container">
       {{ content_for_layout }}
     </div>
-    {% comment %} {% section 'footer' %} {% endcomment %}
   </body>
 </html>
