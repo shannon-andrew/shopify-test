@@ -1,9 +1,12 @@
-{{ 'section-hero.css' | asset_url | stylesheet_tag }}
-
 <h1>Hello world</h1>
 
 {% schema %}
 {
-  "name": "hero"
+  "name": "hero",
+  "settings": [],
+  "presets": [{ "name": "Default hero section" }],
+  "tag": "header",
+  "class": "custom-hero-section",
+  "limit": 1
 }
 {% endschema %}
