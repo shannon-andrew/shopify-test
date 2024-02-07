@@ -1,4 +1,25 @@
-<h1>{{ section.settings.text }}</h1>
+<h1>{{ 'text' | t }}</h1>
+
+{% for block in section.blocks %}
+  {% if block.type == 'paragraph' %}
+    <p>{{ block.settings.text }}</p>
+  {% elsif block.type == '@app' %}
+    {% render block %}
+  {% endif %}
+{% endfor %}
+
+<h1 style="color: {{ section.settings.color }} ">{{ section.settings.text }}</h1>
+
+{% for block in section.blocks %}
+  {% if block.type == 'social' %}
+    <a href="{{  block.settings.url}}">{{ block.settings.text }}</a>
+  {% elsif block.type == 'paragraph' %}
+    <p>{{ block.settings.text }}</p>
+  {% endif %}
+{% endfor %}
+
+{% stylesheet %}
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -8,11 +29,71 @@
       "type": "text",
       "id": "text",
       "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Text color",
+      "default": "#000"
     }
   ],
-  "presets": [{ "name": "Default hero section" }],
+  "presets": [
+    {
+      "name": "Default hero section",
+      "settings": {
+        "text": "Dfault text"
+      }
+    },
+    {
+      "name": "Red hero section",
+      "settings": {
+        "text": "Red text"
+      }
+    }
+  ],
   "tag": "header",
   "class": "custom-hero-section",
-  "limit": 1
+  "limit": 2,
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "name": "Social",
+      "type": "social",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "name": "Paragraph",
+      "type": "paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "locales": {
+    "en": {
+      "text": "Hello"
+    },
+    "es": {
+      "text": "Ola"
+    }
+  }
 }
 {% endschema %}

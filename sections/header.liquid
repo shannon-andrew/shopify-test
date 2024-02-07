@@ -1,13 +1,14 @@
-<header>
-
-  <h1>{{ shop.name }}</h1>
-
-  <p>Andrew shannon</p>
-
-  </header>
+<h1>{{ section.settings.text }}</h1>
 
 {% schema %}
 {
-  "name": "header"
+  "name": "header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    }
+  ]
 }
 {% endschema %}
