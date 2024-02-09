@@ -12,6 +12,11 @@
 
 .content {
   position: absolute;
-  bottom: 4rem;
+  bottom: 8rem;
   left: 4rem;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 1.6rem;
 }
