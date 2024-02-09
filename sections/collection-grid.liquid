@@ -1,0 +1,9 @@
+{% for product in collections['Just landed'] %}
+  {% include 'product-card' %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "new in"
+}
+{% endschema %}
