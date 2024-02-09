@@ -8,9 +8,16 @@
         "button_text": "Explore now",
         "url": ""
       }
+    },
+    "collection_grid_KazhAM": {
+      "type": "collection-grid",
+      "settings": {
+        "collection": "just-landed"
+      }
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "collection_grid_KazhAM"
   ]
 }
