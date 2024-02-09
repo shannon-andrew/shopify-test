@@ -1,0 +1,19 @@
+header {
+  padding: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-family: sans-serif;
+
+  .link-list {
+    display: flex;
+    p {
+      margin-right: 0.8rem;
+      line-height: 0;
+    }
+  }y
+
+  img {
+    width: 12rem;
+  }
+}
