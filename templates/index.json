@@ -8,16 +8,9 @@
         "button_text": "Explore now",
         "url": ""
       }
-    },
-    "second": {
-      "type": "collection-grid",
-      "settings": {
-        "collection": ""
-      }
     }
   },
   "order": [
-    "hero",
-    "second"
+    "hero"
   ]
 }
