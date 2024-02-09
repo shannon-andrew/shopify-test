@@ -2,7 +2,7 @@
 
 <h1>{{ section.settings.collection.title }}</h1>
 
-{% for product in collection.products %}
+{% for product in collection.products limit: section.settings.collection.number %}
   {% render 'product-card', product: product %}
 {% endfor %}
 
@@ -15,13 +15,19 @@
       "type": "collection",
       "id": "collection",
       "label": "Choose collection"
+    },
+    {
+      "type": "number",
+      "id": "number",
+      "label": "Number in grid"
     }
   ],
   "presets": [
     {
       "name": "Collection grid",
       "settings": {
-        "collection": "just-landed"
+        "collection": "just-landed",
+        "number": 4
       }
     }
   ]
