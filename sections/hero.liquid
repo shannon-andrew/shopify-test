@@ -5,7 +5,7 @@
   <button>{{ section.settings.button_text }}</button>
 </div>
 
-{{ class="image" section.settings.hero_image | image_url: width: 300 | image_tag }}
+<img class="image" src="{{ section.settings.hero_image | image_url:'200x'}}">
 
 {% schema %}
 {
