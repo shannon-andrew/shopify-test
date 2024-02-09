@@ -1,5 +1,6 @@
 {{ product.title }}
 
+{{ product.featured_image | image_url: width: 300 | image_tag }}
 {% schema %}
 {
   "name": "Product"
