@@ -1,6 +1,4 @@
-
-
-<img class="image" src="{{section.settings.image_1  | img_url: '2x'}}">
+{{ section.settings.image_1 | image_url | image_tag: class: 'image' }}
 
 <div class="text-content">
   <h1>{{ section.settings.title }}</h1>
