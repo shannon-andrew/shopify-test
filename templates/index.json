@@ -14,17 +14,10 @@
       "settings": {
         "collection": ""
       }
-    },
-    "collection_grid_QcG8RK": {
-      "type": "collection-grid",
-      "settings": {
-        "collection": "just-landed"
-      }
     }
   },
   "order": [
     "hero",
-    "second",
-    "collection_grid_QcG8RK"
+    "second"
   ]
 }
