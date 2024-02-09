@@ -4,6 +4,7 @@
     {{ 'global.css' | asset_url | stylesheet_tag }}
   </head>
   <body>
+    {% section 'header' %}
     <div class="container">
       {{ content_for_layout }}
     </div>

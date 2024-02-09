@@ -1,13 +1,56 @@
-<h1>{{ settings.text }}</h1>
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
+<img class="image" src="{{section.settings.image_1  | img_url: '2x'}}">
+
+<div class="text-content">
+  <h1>{{ section.settings.title }}</h1>
+  <p>{{ section.settings.text }}</p>
+
+  <a href="{{ section.settings.url }}">
+    <button>{{ section.settings.button_text }}</button></a
+  >
+</div>
 
 {% schema %}
 {
-  "name": "test",
+  "name": "Banner",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Text"
+    },
     {
       "type": "text",
       "id": "text",
       "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Button Link"
+    }
+  ],
+  "tag": "section",
+  "class": "test-container",
+  "presets": [
+    {
+      "name": "Banner",
+      "settings": {
+        "title": "Your title here",
+        "text": "Your sub here",
+        "button_text": "Explore now"
+      }
     }
   ]
 }

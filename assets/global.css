@@ -55,9 +55,15 @@ p {
   line-height: 2.4rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 button {
