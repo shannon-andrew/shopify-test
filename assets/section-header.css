@@ -2,8 +2,7 @@ header {
   padding: 2.4rem;
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  font-family: sans-serif;
+  align-items: center;
   position: fixed;
   width: 100%;
   top: 0;

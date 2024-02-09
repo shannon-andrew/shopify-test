@@ -1,3 +1,17 @@
 {% for product in collections['just-landed'].products %}
   {% render 'product-card', product: product %}
 {% endfor %}
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ]
+}
+{% endschema %}
