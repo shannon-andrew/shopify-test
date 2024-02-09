@@ -15,7 +15,7 @@
         "collection": ""
       }
     },
-    "collection_grid_R3wDNn": {
+    "collection_grid_QcG8RK": {
       "type": "collection-grid",
       "settings": {
         "collection": "just-landed"
@@ -25,6 +25,6 @@
   "order": [
     "hero",
     "second",
-    "collection_grid_R3wDNn"
+    "collection_grid_QcG8RK"
   ]
 }
