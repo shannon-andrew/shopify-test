@@ -5,14 +5,9 @@
       "settings": {
       }
     },
-    "collection-grid": {
-      "type": "collection-grid",
-      "settings": {
-      }
+    "second": {
+      "type": "collection-grid"
     }
   },
-  "order": [
-    "hero",
-    "collection-grid"
-  ]
+  "order": ["hero", "second"]
 }
