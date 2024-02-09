@@ -3,15 +3,21 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "hero_image": "shopify://shop_images/hero.png",
+        "hero_image": "shopify:\/\/shop_images\/hero.png",
         "title": "Cargo shoulder bag",
         "button_text": "Explore collections",
         "url": ""
       }
     },
     "second": {
-      "type": "collection-grid"
+      "type": "collection-grid",
+      "settings": {
+        "collection": "just-landed"
+      }
     }
   },
-  "order": ["hero", "second"]
+  "order": [
+    "hero",
+    "second"
+  ]
 }
