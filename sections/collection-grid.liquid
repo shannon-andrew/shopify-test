@@ -1,4 +1,6 @@
-{% for product in collections['just-landed'].products %}
+{{ section.settings.collection.title }}
+
+{% for product in collections['section.settings.collection'].products %}
   {% render 'product-card', product: product %}
 {% endfor %}
 
