@@ -1,18 +1,18 @@
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "hero": {
+      "type": "hero",
       "settings": {
       }
     },
-    "collection": {
-      "type": "main-collection",
+    "collection-grid": {
+      "type": "collection-grid",
       "settings": {
       }
     }
   },
   "order": [
-    "main",
-    "collection"
+    "hero",
+    "collection-grid"
   ]
 }
