@@ -1,11 +1,8 @@
-{% for product in collection.products %}
-  {{ {{ product.title }}
-
-  {{ product.featured_image | image_url: width: 300 | image_tag }} }}
+{% for product in collections['new-in'].products %}
+  {{- product.title | link_to: product.url }}
 {% endfor %}
-
 {% schema %}
 {
-  "name": "Main Collection"
+  "name": "Collection"
 }
 {% endschema %}
