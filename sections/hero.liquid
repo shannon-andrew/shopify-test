@@ -1,95 +1,43 @@
-<h1>{{ 'text' | t }}</h1>
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
-{% for block in section.blocks %}
-  {% if block.type == 'paragraph' %}
-    <p>{{ block.settings.text }}</p>
-  {% elsif block.type == '@app' %}
-    {% render block %}
-  {% endif %}
-{% endfor %}
-
-<h1 style="color: {{ section.settings.color }} ">{{ section.settings.text }}</h1>
-
-{% for block in section.blocks %}
-  {% if block.type == 'social' %}
-    <a href="{{  block.settings.url}}">{{ block.settings.text }}</a>
-  {% elsif block.type == 'paragraph' %}
-    <p>{{ block.settings.text }}</p>
-  {% endif %}
-{% endfor %}
+<img class="image" src="{{ section.settings.hero_image | image_url}}" width="100" height="200">
+<h1>{{ section.settings.title }}</h1>
 
 {% schema %}
 {
-  "name": "hero",
+  "name": "Hero",
   "settings": [
     {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
       "type": "text",
-      "id": "text",
+      "id": "title",
       "label": "Text"
     },
     {
-      "type": "color",
-      "id": "color",
-      "label": "Text color",
-      "default": "#000"
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Button Link"
     }
   ],
+  "tag": "section",
+  "class": "hero",
   "presets": [
     {
-      "name": "Default hero section",
+      "name": "Hero",
       "settings": {
-        "text": "Dfault text"
-      }
-    },
-    {
-      "name": "Red hero section",
-      "settings": {
-        "text": "Red text"
+        "title": "Your title here",
+        "button_text": "Explore now"
       }
     }
-  ],
-  "tag": "header",
-  "class": "custom-hero-section",
-  "limit": 2,
-  "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "name": "Social",
-      "type": "social",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "URL"
-        }
-      ]
-    },
-    {
-      "name": "Paragraph",
-      "type": "paragraph",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "text",
-          "label": "Text"
-        }
-      ]
-    }
-  ],
-  "locales": {
-    "en": {
-      "text": "Hello"
-    },
-    "es": {
-      "text": "Ola"
-    }
-  }
+  ]
 }
 {% endschema %}

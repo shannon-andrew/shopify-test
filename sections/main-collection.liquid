@@ -1,6 +1,10 @@
-{% for product in collections['new-in'].products %}
-  {{- product.title | link_to: product.url }}
+{% for product in collections.all.products %}
+  <a href="{{ product.url }}">
+    <h1>{{ product.title }}</h1>
+    {{ product.featured_image | image_url: width: 300 | image_tag }}
+  </a>
 {% endfor %}
+
 {% schema %}
 {
   "name": "Collection"
