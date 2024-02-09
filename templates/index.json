@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/hero.png",
+        "title": "CARGO SHOULDER BAG",
+        "button_text": "Explore collection",
+        "url": ""
+      }
+    }
+  },
+  "order": [
+    "hero"
+  ]
+}
