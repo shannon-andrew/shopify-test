@@ -1,5 +1,5 @@
 {% for product in collections['just-landed'].products %}
   <h1>{{ product.title }}</h1>
 
-  {% render 'product-card' with product %}
+  {% render 'product-card', product: product %}
 {% endfor %}
