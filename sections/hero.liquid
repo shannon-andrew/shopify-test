@@ -1,7 +1,10 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
+<div class="content">
+  <h3 class="title">{{ section.settings.title }}</h3>
+  <button>{{ section.settings.button_text }}</button>
+</div>
 <img class="image" src="{{ section.settings.hero_image | image_url}}">
-<h1 class="title">{{ section.settings.title }}</h1>
 
 {% schema %}
 {
