@@ -1,11 +1,23 @@
 {
   "sections": {
     "hero": {
-      "type": "hero"
+      "type": "hero",
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/hero.png",
+        "title": "Shoulder bag collection",
+        "button_text": "Explore now",
+        "url": ""
+      }
     },
     "second": {
-      "type": "collection-grid"
+      "type": "collection-grid",
+      "settings": {
+        "collection": ""
+      }
     }
   },
-  "order": ["hero", "second"]
+  "order": [
+    "hero",
+    "second"
+  ]
 }
