@@ -1,6 +1,6 @@
 {{ section.settings.collection.title }}
 
-{% for product in collections['section.settings.collection'].products %}
+{% for product in collections['section.settings.collection'] %}
   {% render 'product-card', product: product %}
 {% endfor %}
 
