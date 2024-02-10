@@ -10,6 +10,8 @@ header {
   z-index: 3;
   background: white;
 
+  box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.05);
+
   .link-list {
     display: flex;
     p {
