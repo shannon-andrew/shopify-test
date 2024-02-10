@@ -5,13 +5,10 @@
   <button>{{ section.settings.button_text }}</button>
 </div>
 
-<img
-  src="
-    {% if section.settings.hero_image == blank %}
-      https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098&width=1920 {% endif %}
-    {{ section.settings.hero_image | img_url: '200x' }}
-  "
->
+{{
+  {% if section.settings.hero_image == blank %}
+  "https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098&width=1920" {% endif %} section.settings.hero_image | image_url: width: 1920 | image_tag: class: 'image'
+}}
 
 {% schema %}
 {
