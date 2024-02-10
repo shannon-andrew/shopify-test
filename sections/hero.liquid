@@ -5,15 +5,15 @@
   <button>{{ section.settings.button_text }}</button>
 </div>
 
-{%- assign default = 'https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098&w=1920' -%}
+{% if section.settings.hero_image == blank %}
+  {% assign image = 'https://superhi-baggy.myshopify.com/cdn/shop/files/WHILED_SUNNY-SIDE-UP-IG-AD.webp?v=1707586990&width=800' %}
+{% else %}
+  {% assign image = section.settings.hero_image %}
+{% endif %}
 
 <img
   class="image"
-  src="
-    {% if section.settings.hero_image == blank %}
-      {{default | image_url: '500x300' }} {% endif %}
-    {{ section.settings.hero_image | image_url: '500x300' }}
-  "
+  src="{{ image | image_url | image_tag: "image", "image", "200x" }}"
   width="1920"
   height="1080"
 >
