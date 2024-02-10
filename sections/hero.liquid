@@ -5,17 +5,15 @@
   <button>{{ section.settings.button_text }}</button>
 </div>
 
-{% if section.settings.hero_image == blank %}
-  {% assign image = 'https://superhi-baggy.myshopify.com/cdn/shop/files/WHILED_SUNNY-SIDE-UP-IG-AD.webp?v=1707586990&width=800' %}
-{% else %}
-  {% assign image = section.settings.hero_image %}
-{% endif %}
-
 <img
+  src="
+    {% if section.settings.hero_image == blank %}
+    https://cdn.shopify.com/s/files/1/0687/8924/0057/files/hero.png?v=1707500020 {% endif %}
+    {{ section.settings.hero_image | image_url}}
+  "
   class="image"
-  src="{{ image | image_url | image_tag: "image", "image", "200x" }}"
   width="1920"
-  height="1080"
+  height="auto"
 >
 
 {% schema %}
