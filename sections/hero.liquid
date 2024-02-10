@@ -5,11 +5,13 @@
   <button>{{ section.settings.button_text }}</button>
 </div>
 
+{%- assign default = 'https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098&w=1920' -%}
+
 <img
   class="image"
   src="
     {% if section.settings.hero_image == blank %}
-    https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098 {% endif %}
+      {{default}} {% endif %}
     {{ section.settings.hero_image | img_url: '200x'}}
   "
 >
