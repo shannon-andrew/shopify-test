@@ -1,9 +1,9 @@
 {{ 'section-collection-grid.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.collection == blank %}
-  {%- assign collection = 'just-landed' -%}
+  {% assign collection = collections['just-landed'] %}
 {% else %}
-  {%- assign collection = collections[section.settings.collection] -%}
+  {% assign collection = collections[section.settings.collection] %}
 {%- endif %}
 
 <div class="max-width ">
