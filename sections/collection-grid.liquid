@@ -2,7 +2,7 @@
 
 <h1>{{ section.settings.collection.title }}</h1>
 
-{% for product in collection.products limit: section.settings.collection.number %}
+{% for product in collection.products limit: section.settings.number %}
   {% render 'product-card', product: product %}
 {% endfor %}
 
