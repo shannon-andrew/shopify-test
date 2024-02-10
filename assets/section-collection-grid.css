@@ -3,9 +3,9 @@
 
   .titles {
     display: flex;
-    background: red;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 1.6rem;
   }
 
   .collection-grid {
