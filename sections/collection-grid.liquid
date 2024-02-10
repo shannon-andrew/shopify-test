@@ -8,8 +8,12 @@
 
 <div class="max-width ">
   <div class="container">
-    <h4>{{ collection.title }}</h4>
-    <p>{{ collection.description }}</p>
+    {% if section.settings.show_collection_title %}
+      <h4>{{ collection.title }}</h4>
+    {% endif %}
+    {% if section.settings.show_collection_desc %}
+      <p>{{ collection.description }}</p>
+    {% endif %}
     <div class="collection-grid">
       {% for product in collection.products limit: section.settings.number %}
         {% render 'product-card', product: product %}
@@ -42,6 +46,12 @@
       "id": "show_collection_title",
       "label": "Show collection title",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_desc",
+      "label": "Show collection description",
+      "default": false
     }
   ]
 }
