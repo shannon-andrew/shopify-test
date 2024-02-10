@@ -8,14 +8,16 @@
 
 <div class="max-width ">
   <div class="container">
-    <div class="titles">
-      <h2>
-        {{ section.settings.grid_heading }}
-      </h2>
-      <p class="medium">
-        {{ section.settings.grid_sub }}
-      </p>
-    </div>
+    {% if section.settings.grid_heading or section.settings.grid_sub %}
+      <div class="titles">
+        <h2>
+          {{ section.settings.grid_heading }}
+        </h2>
+        <p class="medium">
+          {{ section.settings.grid_sub }}
+        </p>
+      </div>
+    {%- endif %}
     <div class="collection-grid">
       {% for product in collection.products limit: section.settings.number %}
         {% render 'product-card', product: product %}
@@ -28,6 +30,12 @@
 {
   "name": "Collection grid",
   "tag": "section",
+  "default": {
+    "settings": {
+      "grid_heading": "Slideshow",
+      "grid_sub": "Grid sub"
+    }
+  },
   "settings": [
     {
       "type": "collection",
@@ -53,13 +61,6 @@
       "id": "grid_sub",
       "label": "Grid sub"
     }
-  ],
-  "default": {
-    "settings": {
-      "number": 4,
-      "grid_heading": "Slideshow",
-      "grid_sub": "Grid sub"
-    }
-  }
+  ]
 }
 {% endschema %}
