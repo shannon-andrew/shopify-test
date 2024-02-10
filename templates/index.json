@@ -1,24 +1,11 @@
 {
   "sections": {
     "hero": {
-      "type": "hero",
-      "settings": {
-        "hero_image": "shopify:\/\/shop_images\/AT_Boyko-Apartment_010_AB.webp",
-        "title": "Shoulder bag collection",
-        "button_text": "Explore now",
-        "url": ""
-      }
+      "type": "hero"
     },
-    "collection_grid_WDgETR": {
-      "type": "collection-grid",
-      "settings": {
-        "collection": "just-landed",
-        "number": 4
-      }
+    "collection": {
+      "type": "collection-grid"
     }
   },
-  "order": [
-    "hero",
-    "collection_grid_WDgETR"
-  ]
+  "order": ["hero", "collection_grid_WDgETR"]
 }
