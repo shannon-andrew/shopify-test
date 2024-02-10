@@ -84,10 +84,8 @@ a {
   color: inherit;
 }
 
-.max-width {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 2.4rem;
+body {
+  margin-top: 80px;
 }
 
 button {
@@ -104,4 +102,10 @@ button {
     background: none;
     color: #141414;
   }
+}
+
+.max-width {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2.4rem;
 }

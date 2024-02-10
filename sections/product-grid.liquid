@@ -1,7 +1,10 @@
-{% for product in section.settings.product_list %}
-  {% render 'featured-card-horizontal', product: product %}
-  {{ section.settings.product_list.count }}
-{% endfor %}
+{{ 'section-product-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="max-width wrapper">
+  {% for product in section.settings.product_list %}
+    {% render 'featured-card-horizontal', product: product %}
+  {% endfor %}
+</div>
 
 {% schema %}
 {
@@ -12,7 +15,7 @@
       "type": "product_list",
       "id": "product_list",
       "label": "Products",
-      "limit": 12
+      "limit": 1
     }
   ]
 }

@@ -2,10 +2,10 @@
 
 <a href="{{ product.url }}">
   <div class="featured-card ">
-    {{ product.featured_image | image_url: width: 300 | image_tag }}
+    {{ product.featured_image | image_url: width: 800 | image_tag }}
     <div class="content">
-      <h3>{{ product.title }}</h3>
-      <p>{{ product.description | strip_html | truncate: 40 }}</p>
+      <h2>{{ product.title }}</h2>
+      <p class="medium">{{ product.description | strip_html | truncate: 80 }}</p>
     </div>
   </div>
 </a>
