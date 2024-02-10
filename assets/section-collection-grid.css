@@ -1,12 +1,14 @@
 .container {
   padding: 4rem 0;
+
   .collection-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.6rem;
   }
+}
 
-  h4 {
-    margin-bottom: 1.6rem;
-  }
+.titles {
+  display: flex;
+  background: red;
 }

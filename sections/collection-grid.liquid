@@ -8,12 +8,14 @@
 
 <div class="max-width ">
   <div class="container">
-    <h4>
-      {{ section.settings.grid_heading }}
-    </h4>
-    <p>
-      {{ section.settings.grid_sub }}
-    </p>
+    <div class="titles">
+      <h1>
+        {{ section.settings.grid_heading }}
+      </h1>
+      <p>
+        {{ section.settings.grid_sub }}
+      </p>
+    </div>
     <div class="collection-grid">
       {% for product in collection.products limit: section.settings.number %}
         {% render 'product-card', product: product %}
