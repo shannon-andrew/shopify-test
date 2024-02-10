@@ -5,10 +5,13 @@
   <button>{{ section.settings.button_text }}</button>
 </div>
 
-{{
-  {% if section.settings.hero_image == blank %}
-  "https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098&width=1920" {% endif %} section.settings.hero_image | image_url: width: 1920 | image_tag: class: 'image'
-}}
+<img
+  src="
+    {% if section.settings.hero_image == blank %}
+      https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098&width=1920 {% endif %}
+    {{ section.settings.hero_image | img_url: '200x' }}
+  "
+>
 
 {% schema %}
 {
@@ -35,12 +38,6 @@
       "label": "Button Link"
     }
   ],
-  "default": {
-    "settings": {
-      "title": "ddsfd",
-      "button_text": "test this"
-    }
-  },
   "tag": "section",
   "class": "hero",
   "presets": [
