@@ -9,15 +9,16 @@
         "url": ""
       }
     },
-    "collection_grid_KazhAM": {
+    "collection_grid_WDgETR": {
       "type": "collection-grid",
       "settings": {
-        "collection": "just-landed"
+        "collection": "just-landed",
+        "number": 4
       }
     }
   },
   "order": [
     "hero",
-    "collection_grid_KazhAM"
+    "collection_grid_WDgETR"
   ]
 }
