@@ -12,8 +12,10 @@
   src="
     {% if section.settings.hero_image == blank %}
       {{default}} {% endif %}
-    {{ section.settings.hero_image | img_url: '200x'}}
+    {{ section.settings.hero_image | image_url: '500x300' }}
   "
+  width="500"
+  height="300"
 >
 
 {% schema %}
