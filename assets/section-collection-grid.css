@@ -1,6 +1,5 @@
 .container {
-  padding: 4rem 0;
-
+  padding: 8rem 0;
   .titles {
     display: flex;
     justify-content: space-between;
