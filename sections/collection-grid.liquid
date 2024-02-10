@@ -8,7 +8,7 @@
 
 <div class="max-width ">
   <div class="container">
-    {% if section.settings.grid_heading != blank %}
+    {% if section.settings.grid_heading or section.settings.grid_sub != blank %}
       <div class="titles">
         <h2>
           {{ section.settings.grid_heading }}
