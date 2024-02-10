@@ -1,6 +1,11 @@
 <h1>{{ product.title }}</h1>
 
 {{ product.featured_image | image_url: width: 300 | image_tag }}
+{{ product.images[1] | image_url: width: 300 | image_tag }}
+
+{% for image in product.images %}
+  {{ image | image_url: width: 300 | image_tag }}
+{% endfor %}
 <h1>{{ product.description }}</h1>
 
 {% schema %}
