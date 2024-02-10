@@ -3,9 +3,12 @@
     "hero": {
       "type": "hero"
     },
-    "collection": {
+    "collection-grid": {
       "type": "collection-grid"
+    },
+    "product-grid": {
+      "type": "product-grid"
     }
   },
-  "order": ["hero", "collection"]
+  "order": ["hero", "collection-grid", "product-grid"]
 }
