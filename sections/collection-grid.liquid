@@ -8,11 +8,15 @@
 
 <div class="max-width ">
   <div class="container">
-    {% if section.settings.grid_heading %}
+    {% if section.settings.grid_heading == blank %}
       <h4>{{ collection.title }}</h4>
+    {% else %}
+      {{ section.settings.grid_heading }}
     {% endif %}
     {% if section.settings.grid_sub %}
       <p>{{ collection.description }}</p>
+    {% else %}
+      {{ section.settings.sub }}
     {% endif %}
     <div class="collection-grid">
       {% for product in collection.products limit: section.settings.number %}
