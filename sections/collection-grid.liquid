@@ -1,10 +1,17 @@
+{{ 'section-collection-grid.css' | asset_url | stylesheet_tag }}
+
 {%- assign collection = collections[section.settings.collection] -%}
 
-<h1>{{ section.settings.collection.title }}</h1>
-
-{% for product in collection.products limit: section.settings.number %}
-  {% render 'product-card', product: product %}
-{% endfor %}
+<div class="max-width ">
+  <div class="container">
+    <h4>{{ section.settings.collection.title }}</h4>
+    <div class="collection-grid">
+      {% for product in collection.products limit: section.settings.number %}
+        {% render 'product-card', product: product %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {

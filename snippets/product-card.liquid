@@ -1,8 +1,10 @@
 {{ 'snippet-product-card.css' | asset_url | stylesheet_tag }}
 
-<div class="product-card">
-  {{ product.featured_image | image_url: width: 300 | image_tag }}
-  <div class="content">
-    <p>{{ product.title }}</p>
+<a href="{{ product.url }}">
+  <div class="product-card">
+    {{ product.featured_image | image_url: width: 300 | image_tag }}
+    <div class="content">
+      <p>{{ product.title }}</p>
+    </div>
   </div>
-</div>
+</a>
