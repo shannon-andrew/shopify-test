@@ -8,10 +8,10 @@
 
 <div class="max-width ">
   <div class="container">
-    {% if section.settings.show_collection_title %}
+    {% if section.settings.grid_heading %}
       <h4>{{ collection.title }}</h4>
     {% endif %}
-    {% if section.settings.show_collection_desc %}
+    {% if section.settings.grid_sub %}
       <p>{{ collection.description }}</p>
     {% endif %}
     <div class="collection-grid">
@@ -42,16 +42,14 @@
       "default": 4
     },
     {
-      "type": "checkbox",
-      "id": "show_collection_title",
-      "label": "Show collection title",
-      "default": true
+      "type": "text",
+      "id": "grid_heading",
+      "label": "Grid heading"
     },
     {
-      "type": "checkbox",
-      "id": "show_collection_desc",
-      "label": "Show collection description",
-      "default": false
+      "type": "text",
+      "id": "grid_sub",
+      "label": "Grid sub"
     }
   ]
 }
