@@ -5,7 +5,10 @@
   <button>{{ section.settings.button_text }}</button>
 </div>
 
-{{ section.settings.hero_image | image_url: width: 1920 | image_tag: class: 'image' }}
+{{
+  {% if section.settings.hero_image == blank %}
+  "https://superhi-baggy.myshopify.com/cdn/shop/files/AT_Boyko-Apartment_010_AB.webp?v=1707525098&width=1920" {% endif %} section.settings.hero_image | image_url: width: 1920 | image_tag: class: 'image'
+}}
 
 {% schema %}
 {
@@ -39,6 +42,15 @@
     }
   },
   "tag": "section",
-  "class": "hero"
+  "class": "hero",
+  "presets": [
+    {
+      "name": "Hero",
+      "settings": {
+        "title": "Your title here",
+        "button_text": "your button text here"
+      }
+    }
+  ]
 }
 {% endschema %}
