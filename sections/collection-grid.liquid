@@ -9,18 +9,10 @@
 <div class="max-width ">
   <div class="container">
     <h4>
-      {% if section.settings.grid_heading == blank %}
-        {{ collection.title }}
-      {% else %}
-        {{ section.settings.grid_heading }}
-      {% endif %}
+      {{ section.settings.grid_heading }}
     </h4>
     <p>
-      {% if section.settings.grid_sub %}
-        {{ collection.description }}
-      {% else %}
-        {{ section.settings.sub }}
-      {% endif %}
+      {{ section.settings.sub }}
     </p>
     <div class="collection-grid">
       {% for product in collection.products limit: section.settings.number %}
