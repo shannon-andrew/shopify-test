@@ -1,14 +1,16 @@
 .container {
   padding: 4rem 0;
 
+  .titles {
+    display: flex;
+    background: red;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   .collection-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.6rem;
   }
-}
-
-.titles {
-  display: flex;
-  background: red;
 }
