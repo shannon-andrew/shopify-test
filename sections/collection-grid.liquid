@@ -8,16 +8,20 @@
 
 <div class="max-width ">
   <div class="container">
-    {% if section.settings.grid_heading != blank or section.settings.grid_sub != blank %}
+    {% for block in section.blocks %}
       <div class="titles">
-        <h3>
-          {{ section.settings.grid_heading }}
-        </h3>
-        <p>
-          {{ section.settings.grid_sub }}
-        </p>
+        {% if block.settings.grid_heading %}
+          <h3 class="title">{{ block.settings.grid_heading }}</h3>
+        {% endif %}
+
+        {% if block.settings.grid_sub %}
+          <p>
+            {{ block.settings.grid_sub }}
+          </p>
+        {% endif %}
       </div>
-    {%- endif %}
+    {% endfor %}
+
     <div class="collection-grid">
       {% for product in collection.products limit: section.settings.number %}
         {% render 'product-card', product: product %}
@@ -44,18 +48,31 @@
       "step": 4,
       "label": "Amount of products",
       "default": 4
-    },
+    }
+  ],
+  "blocks": [
     {
-      "type": "text",
-      "id": "grid_heading",
-      "label": "Grid heading",
-      "default": "Your collection title"
-    },
+      "name": "Titles",
+      "type": "titles",
+      "settings": [
+        {
+          "type": "text",
+          "id": "grid_heading",
+          "label": "Grid heading",
+          "default": "Your collection title"
+        },
+        {
+          "type": "text",
+          "id": "grid_sub",
+          "label": "Grid sub",
+          "default": "Optional subheader. Clear input if you'd prefer not to show"
+        }
+      ]
+    }
+  ],
+  "presets": [
     {
-      "type": "text",
-      "id": "grid_sub",
-      "label": "Grid sub",
-      "default": "Your collection sub"
+      "name": "Collection grid"
     }
   ]
 }

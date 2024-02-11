@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Leitura";
-  src: url("leitura-news.woff2") format("woff2"),
-    url("leitura-news.woff2") format("woff2");
+  src: url("../fonts//leitura-reg.woff2") format("woff2"),
+    url("../fonts//leitura-reg.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Nitti";
-  src: url("nitti-normal.woff2") format("woff2"),
-    url("nitti-normal.woff2") format("woff2");
+  src: url("../fonts/nitti-light.woff2") format("woff2"),
+    url("../fonts/nitti-light.woff2") format("woff2");
 }
 
 html {
