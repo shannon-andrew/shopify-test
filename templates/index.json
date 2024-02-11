@@ -3,6 +3,7 @@
     "hero": {
       "type": "hero",
       "settings": {
+        "hero_image": "shopify:\/\/shop_images\/mugs_1.png",
         "title": "Your text",
         "button_text": "Your button text",
         "url": ""
