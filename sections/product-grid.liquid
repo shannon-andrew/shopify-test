@@ -1,5 +1,12 @@
 {{ 'section-product-grid.css' | asset_url | stylesheet_tag }}
 
+{% assign someProduct = all_products['baby-baggu'] %}
+
+{% if section.settings.product_list == blank %}
+  <h1>kjhkjh</h1>
+  {% render 'featured-card-horizontal', product: someProduct %}
+{% endif %}
+
 <div class="max-width wrapper">
   {% for product in section.settings.product_list %}
     {% render 'featured-card-horizontal', product: product %}
@@ -15,7 +22,15 @@
       "type": "product_list",
       "id": "product_list",
       "label": "Products",
-      "limit": 1
+      "limit": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product list",
+      "settings": {
+        "product_list": ["Sunny-Side-Up-Jigsaw", "crew-sock"]
+      }
     }
   ]
 }

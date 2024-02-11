@@ -1,3 +1,9 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+
+<div class="hero">
+  {{ product.featured_image | image_url: width: 300 | image_tag }}
+</div>
+
 <h1>{{ product.title }}</h1>
 {% for image in product.images %}
   {{ image | image_url: width: 300 | image_tag }}
