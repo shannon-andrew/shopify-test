@@ -3,6 +3,11 @@
 <div class="content">
   <h3 class="title">{{ section.settings.title }}</h3>
   <button>{{ section.settings.button_text }}</button>
+  {% for block in section.blocks %}
+    {% if block.settings.test_text %}
+      <h1>Tes uts true</h1>
+    {% endif %}
+  {% endfor %}
 </div>
 
 <img
@@ -52,6 +57,19 @@
         "title": "Your title",
         "button_text": "Your uttin text"
       }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Button Text",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "test_text",
+          "label": "Button Text"
+        }
+      ]
     }
   ]
 }
