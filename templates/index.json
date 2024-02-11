@@ -2,15 +2,34 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+        "title": "Your text",
+        "button_text": "Your button text",
+        "url": ""
+      }
     },
     "collection": {
       "type": "collection-grid",
-      "settings": {}
+      "settings": {
+        "collection": "",
+        "number": 4,
+        "grid_heading": "Your collection title",
+        "grid_sub": "Your collection sub"
+      }
     },
     "product-grid": {
-      "type": "product-grid"
+      "type": "product-grid",
+      "settings": {
+        "product_list": [
+          "baby-baggu",
+          "crew-sock"
+        ]
+      }
     }
   },
-  "order": ["hero", "collection", "product-grid"]
+  "order": [
+    "hero",
+    "collection",
+    "product-grid"
+  ]
 }

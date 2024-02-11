@@ -2,12 +2,17 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+      }
     },
     "collection": {
       "type": "collection-grid",
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["hero", "collection"]
+  "order": [
+    "hero",
+    "collection"
+  ]
 }
