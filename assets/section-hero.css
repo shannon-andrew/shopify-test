@@ -1,9 +1,9 @@
 .hero {
   z-index: 1;
   width: 98%;
-  margin: 0 auto;
-  height: calc(100vh - 80px);
-  border-radius: 0 0 8rem 8rem;
+  margin: 10.2rem auto 0 auto;
+  height: calc(100vh - 184px);
+  border-radius: 8rem 8rem 8rem 8rem;
 
   overflow: hidden;
   position: relative;

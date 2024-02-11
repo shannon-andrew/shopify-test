@@ -1,11 +1,12 @@
 <div class="max-width">
   <div class="collection-grid">
     {% for product in collections.all.products %}
-      <a href="{{ product.url }}">
-        {% render 'product-card', product: product %}
-      </a>
+      {% render 'product-card', product: product %}
     {% endfor %}
   </div>
+  {% for product in collections['just-landed'].products %}
+    {% render 'featured-card-horizontal', product: product %}
+  {% endfor %}
 </div>
 
 {% schema %}
