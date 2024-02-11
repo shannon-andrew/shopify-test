@@ -3,7 +3,10 @@
 <div class="content">
   {% for block in section.blocks %}
     {% if block.settings.title %}
-      <h3 class="title">{{ block.settings.title }}</h3>
+      <h2 class="title">{{ block.settings.title }}</h2>
+    {% endif %}
+    {% if block.settings.subtitle %}
+      <p class="medium">{{ block.settings.subtitle }}</p>
     {% endif %}
     {% if block.settings.button_text %}
       <button>{{ block.settings.button_text }}</button>
@@ -42,6 +45,18 @@
           "id": "title",
           "label": "Title text",
           "default": "Default titl;e"
+        }
+      ]
+    },
+    {
+      "name": "Subtitle",
+      "type": "subtitle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle text",
+          "default": "Some subtitle text here"
         }
       ]
     },

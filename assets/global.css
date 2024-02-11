@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Leitura";
   src: url("./leitura-reg.woff2") format("woff2"),
-    url("./fonts//leitura-reg.woff2") format("woff2");
+    url("./leitura-reg.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Nitti";
-  src: url("./fonts/nitti-light.woff2") format("woff2"),
-    url("./fonts/nitti-light.woff2") format("woff2");
+  src: url("./nitti-light.woff2") format("woff2"),
+    url("./nitti-light.woff2") format("woff2");
 }
 
 html {
@@ -99,7 +99,7 @@ button {
   transition: 0.3s;
 
   &:hover {
-    background-color: none;
+    background-color: #fff;
     color: #141414;
   }
 }

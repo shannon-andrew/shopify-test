@@ -16,12 +16,12 @@
 
   .content {
     position: absolute;
-    bottom: 8rem;
-    left: 4rem;
-
-    .title {
-      color: #fff;
-      margin-bottom: 1.6rem;
+    top: 50%;
+    margin-left: 16rem;
+    transform: translateY(-50%);
+    color: #fff;
+    button {
+      margin-top: 1.6rem;
     }
   }
 }
