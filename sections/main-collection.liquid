@@ -1,9 +1,10 @@
-{% for product in collections.all.products %}
-  <a href="{{ product.url }}">
-    <h1>{{ product.title }}</h1>
-    {{ product.featured_image | image_url: width: 300 | image_tag }}
-  </a>
-{% endfor %}
+<div class="max-width">
+  {% for product in collections.all.products %}
+    <a href="{{ product.url }}">
+      {% render 'product-card', product: product %}
+    </a>
+  {% endfor %}
+</div>
 
 {% schema %}
 {
