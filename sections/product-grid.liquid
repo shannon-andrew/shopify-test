@@ -1,6 +1,6 @@
 {{ 'section-product-grid.css' | asset_url | stylesheet_tag }}
 
-{% if section.settings.product_list == blank %}
+{% if section.settings.product_list.length == 0 %}
   <h1>kjhkjh</h1>
 {% endif %}
 
