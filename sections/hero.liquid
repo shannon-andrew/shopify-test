@@ -1,11 +1,12 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
 <div class="content">
-  <h3 class="title">{{ section.settings.title }}</h3>
-  <button>{{ section.settings.button_text }}</button>
   {% for block in section.blocks %}
-    {% if block.settings.test_text %}
-      <h1>Tes uts true</h1>
+    {% if block.settings.title %}
+      <h3 class="title">{{ block.settings.title }}</h3>
+    {% endif %}
+    {% if block.settings.button_text %}
+      <button>{{ block.settings.button_text }}</button>
     {% endif %}
   {% endfor %}
 </div>
@@ -31,18 +32,6 @@
       "label": "Hero Image"
     },
     {
-      "type": "text",
-      "id": "title",
-      "label": "Text",
-      "default": "Your text"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Your button text"
-    },
-    {
       "type": "url",
       "id": "url",
       "label": "Button Link"
@@ -54,20 +43,37 @@
     {
       "name": "Hero",
       "settings": {
-        "title": "Your title",
-        "button_text": "Your uttin text"
+        "url": "https://www.google.com/"
       }
     }
   ],
   "blocks": [
+    {
+      "name": "Content",
+      "type": "content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title text",
+          "default": "Default titl;e"
+        }
+      ]
+    },
     {
       "name": "Button Text",
       "type": "text",
       "settings": [
         {
           "type": "text",
-          "id": "test_text",
-          "label": "Button Text"
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Default button"
+        },
+        {
+          "type": "url",
+          "id": "linkto",
+          "label": "Url"
         }
       ]
     }
