@@ -14,18 +14,6 @@
   {% endfor %}
 </div>
 
-<img
-  src="
-    {% if section.settings.hero_image == blank %}
-      {{ 'test_2.jpg' | file_url }}
-    {% endif %}
-    {{ section.settings.hero_image | image_url}}
-  "
-  class="image"
-  width="1920"
-  height="auto"
->
-
 {% schema %}
 {
   "name": "Hero",
