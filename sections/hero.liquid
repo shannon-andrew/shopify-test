@@ -17,7 +17,8 @@
 <img
   src="
     {% if section.settings.hero_image == blank %}
-    https://cdn.shopify.com/s/files/1/0687/8924/0057/files/hero.png?v=1707500020 {% endif %}
+      {{ 'test_2.jpg' | file_img_url }}
+    {% endif %}
     {{ section.settings.hero_image | image_url}}
   "
   class="image"
