@@ -17,7 +17,7 @@
 <img
   src="
     {% if section.settings.hero_image == blank %}
-      {{ 'test_2.jpg' | file_img_url }}
+      {{ 'test_2.jpg' | file_url }}
     {% endif %}
     {{ section.settings.hero_image | image_url}}
   "
